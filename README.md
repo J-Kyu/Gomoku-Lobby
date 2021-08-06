@@ -47,7 +47,20 @@ GSS is separated into 3 states. In Ready state, GSS will wait until both clients
 | 1900 | GSS is Not ready                                             |
 | 9999 | Wrong Request                                                |
 
-### Client
+## Client
 In this project, client will read given notation(기보) and request GSS to locate go stone. Client also has 3 state which are Ready,In-Game and End Game. In Ready state, client will keeep sending that the client is ready untill GSS answer with gomoku is ready. Once game has started, in the order of turns, each client will rquest to locate go stone by following the given notation(기보). In this process, GSS will check whether now is the player's turn and whether given location is valid location. If GSS successfully located go stone, client will ask whether the game is ended or not. If one of player made gomoku, then both client and GSS will change its state into Game End state. 
+
+## How to Run
+
+### Running Server
+
+```bash
+python3 server.py
+```
+
+### Running Client
+```bash
+python client.py --f {gibo.json}
+```
 
 
