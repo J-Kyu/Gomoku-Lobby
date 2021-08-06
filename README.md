@@ -60,7 +60,7 @@ python3 server.py
 
 ### Running Client
 ```bash
-python client.py --f {gibo.json}
+python3 client.py --f {gibo.json}
 ```
 
 
