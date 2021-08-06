@@ -1,5 +1,7 @@
 # Gomoku Lobby
 
+[Example Video](https://youtu.be/SCW5VSFOUow)
+
 Gomoku Lobby Server is lobby server which handles gomoku games. Gomoku Lobby is consist of two servers which are GSS(Gomoku Session Server) and GSMS (Gomoku Session Managing Server). GSS is responsible of game rule and communication between clients. On the other hand GSMS handles generating and killing GSS and delivering GSS information to client. 
 
 
@@ -44,3 +46,8 @@ GSS is separated into 3 states. In Ready state, GSS will wait until both clients
 | 1800 | Return gomoku board                                          |
 | 1900 | GSS is Not ready                                             |
 | 9999 | Wrong Request                                                |
+
+### Client
+In this project, client will read given notation(기보) and request GSS to locate go stone. Client also has 3 state which are Ready,In-Game and End Game. In Ready state, client will keeep sending that the client is ready untill GSS answer with gomoku is ready. Once game has started, in the order of turns, each client will rquest to locate go stone by following the given notation(기보). In this process, GSS will check whether now is the player's turn and whether given location is valid location. If GSS successfully located go stone, client will ask whether the game is ended or not. If one of player made gomoku, then both client and GSS will change its state into Game End state. 
+
+
